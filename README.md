@@ -1,4 +1,4 @@
-# Custom Datastructures for Fields with JAX
+# Custom Datastructures for Fields with JAX (In Progress)
 [![CodeFactor](https://www.codefactor.io/repository/github/jejjohnson/fieldx/badge)](https://www.codefactor.io/repository/github/jejjohnson/fieldx)
 [![codecov](https://codecov.io/gh/jejjohnson/fieldx/branch/main/graph/badge.svg?token=YGPQQEAK91)](https://codecov.io/gh/jejjohnson/fieldx)
 
