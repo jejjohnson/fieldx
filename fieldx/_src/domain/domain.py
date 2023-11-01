@@ -3,6 +3,7 @@ import equinox as eqx
 import jax.numpy as jnp
 import numpy as np
 # import jaxsw._src.domain.utils as d_utils
+from fieldx._src.domain.utils import make_coords, make_grid_from_coords, make_grid_coords, create_meshgrid_coordinates
 from jaxtyping import Array
 from functools import reduce
 from operator import mul
@@ -64,15 +65,15 @@ class Domain(eqx.Module):
 
     @property
     def coords_axis(self) -> tp.List:
-        return list(map(d_utils.make_coords, self.xmin, self.xmax, self.Nx))
+        return list(map(make_coords, self.xmin, self.xmax, self.Nx))
 
     @property
     def grid_axis(self) -> Array:
-        return d_utils.make_grid_from_coords(self.coords_axis)
+        return make_grid_from_coords(self.coords_axis)
 
     @property
     def coords(self) -> Array:
-        return jnp.asarray(d_utils.make_grid_coords(self.coords_axis))
+        return jnp.asarray(make_grid_coords(self.coords_axis))
 
     @property
     def cell_volume(self) -> float:
